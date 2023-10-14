@@ -13,17 +13,6 @@
   }
 }
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
 .App-body {
   background-color: var(--color-eggshell-white);
   height: 100vh;
@@ -31,19 +20,6 @@
 
 .App-footer {
   background-color: var(--color-dark-vanilla);
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .footer-container {
@@ -72,29 +48,21 @@
   float: left;
   border-radius: 0px;
   border: 1px solid var(--color-jelly-bean-red);
-  font-size: 0.6rem;
-  width: 70%;
+  font-size: 0.8rem;
+  width: 65%;
   margin: 0;
   padding: 0.5rem;
-
-  @media (min-width: 768px) {
-    font-size: 1.2rem;
-  }
 }
 
 .submit-button {
   float: left;
   border: 1px solid var(--color-jelly-bean-red);
   border-radius: 0;
-  font-size: 0.6rem;
-  width: 20%;
+  font-size: 0.8rem;
+  width: 25%;
   margin: 0;
   padding: 0.5rem;
   background-color: var(--color-jelly-bean-red);
-
-  @media (min-width: 768px) {
-    font-size: 1.2rem;
-  }
 }
 
 .submit-button:hover {
@@ -290,15 +258,15 @@ input:focus-visible {
 .main-item-card-3 {
   width: 60%;
   min-height: 20vh;
-  border: 0.4px solid var(--color-pink);
+  border: 1px solid var(--color-pink);
   border-radius: 16px;
   padding: 2rem 3rem;
   text-align: left;
-  color: var(--color-text-dark);
+  color: var(--color-navbar-dark);
 }
 
 h2 {
-  color: var(--color-text-dark);
+  color: var(--color-navbar-dark);
 }
 
 .signup {
@@ -318,7 +286,9 @@ h2 {
     flex-direction: column;
     width: 100%;
 
-    > * {
+    > input[type=text],
+    > input[type=submit],
+    > textarea {
       width: 50%;
       position: relative;
       left: 25%;
@@ -344,13 +314,9 @@ h2 {
 
     }
 
-    > textarea {
-      width: 50%;
-      
-      &:focus-visible {
+    > textarea:focus-visible {
         border: 0.5px solid var(--color-jelly-bean-red);
         outline: none;
-      }
     }
   }
 }
