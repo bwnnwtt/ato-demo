@@ -9,6 +9,9 @@
 :root {
   /* 1rem = 10px, 10px/16px = 62.5% */
   font-size: 62.5%;
+  @media (min-width: 768px) {
+    font-size: 93.75%;
+  }
 
   /* theme colors */
   --color-eggshell-white: rgba(234,231,220);
