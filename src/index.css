@@ -17,6 +17,7 @@
   --color-pink: rgba(233,128,116);
   --color-jelly-bean-red: rgba(232,90,79);
   --color-burly-wood: rgba(222,184,135);
+  --color-golden-brown: rgba(211,160,95);
 }
 
 
@@ -31,4 +32,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-size: x-large;
 }
