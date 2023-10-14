@@ -1,4 +1,27 @@
+import { useEffect } from "react"
+
+
 const Main = () => {
+
+  useEffect(() => {
+    const cards = document.querySelectorAll(".card")
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("slide-in", entry.isIntersecting)
+
+        // disable element from disappearing once it has appeared in the viewport
+        if (entry.isIntersecting) observer.unobserve(entry.target)
+      })
+    }, {
+      threshold: 1,
+    })
+
+    cards.forEach(card => {
+      observer.observe(card)
+    })
+  }, [])
+
   return (
     <div className="main">
       <h1>MEMBER PRIVILEGES</h1>
@@ -9,7 +32,7 @@ const Main = () => {
         <div className="main-item-img-1">
           image here
         </div>
-        <div className="main-item-card-1">
+        <div className="main-item-card-1 card">
           <h2>DINING OPTIONS</h2>
           <br/>
           <p>
@@ -21,22 +44,24 @@ const Main = () => {
         </div>
       </div>
       <div className="main-item-container">
-        <div className="main-item-img-2">
-          image here
-        </div>
-        <div className="main-item-card-2">
+        <div className="main-item-card-2 card">
           <h2>EVENT HALL</h2>
           <br/>
           <p>
             Suspendisse sed rutrum turpis, et hendrerit tortor. Suspendisse semper pellentesque est, commodo maximus leo sagittis vulputate. Donec finibus sollicitudin quam, eu pretium tortor facilisis eu. Maecenas vel ipsum ullamcorper, sollicitudin quam dapibus, blandit libero. Nulla at diam eu diam pharetra commodo id et orci. Aenean justo nisl, tristique sed massa nec, porta pellentesque ipsum. Pellentesque ac vulputate dolor. Phasellus ac lorem mauris. Sed imperdiet arcu sed neque mollis, et pulvinar orci ornare.
           </p>
         </div>
+        <div className="main-item-img-2">
+          image here
+        </div>
       </div>
-      <div className="main-item-container">
+      <div className="main-item-container" 
+      // ref={containerRef}
+      >
         <div className="main-item-img-3">
           image here
         </div>
-        <div className="main-item-card-3">
+        <div className="main-item-card-3 card">
           <h2>SWIMMING POOL</h2>
           <br/>
           <p>
