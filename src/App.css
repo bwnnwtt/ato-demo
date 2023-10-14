@@ -56,9 +56,9 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 30vw 30vw 30vw;
+  grid-template-columns: 28vw 28vw 28vw;
   width: 100%;
-  column-gap: 2vw;
+  column-gap: 3vw;
 }
 
 .input-form {
