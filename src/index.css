@@ -1,5 +1,26 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', 'Lato', 'Poppins', 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  /* 1rem = 10px, 10px/16px = 62.5% */
+  font-size: 62.5%;
+
+  /* theme colors */
+  --color-eggshell-white: rgba(234,231,220);
+  --color-dark-vanilla: #d8c3a5;
+  --color-taupe-grey: #8e8d8a;
+  --color-pink: rgba(233,128,116);
+  --color-jelly-bean-red: rgba(232,90,79);
+  
+}
+
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
