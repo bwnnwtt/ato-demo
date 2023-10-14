@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="navbar">
       <img className="navbar-logo" src={logo} alt="ato-logo"></img>
       <ul>
-        <li><a href="https://#">Already a member?</a></li>
+        <li>Already a member?</li>
         <li><a href="https://#">Login</a></li>
         <li><a href="https://#">Sign up</a></li>
         <HamburgerIcon />

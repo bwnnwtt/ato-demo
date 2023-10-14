@@ -75,7 +75,7 @@
   font-size: inherit;
   width: 70%;
   margin: 0;
-  padding: 1px;
+  padding: 0.5rem;
 }
 
 .submit-button {
@@ -84,7 +84,7 @@
   font-size: inherit;
   width: 20%;
   margin: 0;
-  padding: 1px;
+  padding: 0.5rem;
   background-color: var(--color-jelly-bean-red);
 }
 
@@ -186,7 +186,7 @@ input:focus-visible {
 
 .navbar {
   height: 8rem;
-  background-color: var(--color-taupe-grey);
+  background-color: var(--color-navbar-dark);
   padding: 1rem 2rem 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -236,14 +236,14 @@ input:focus-visible {
 }
 
 .main {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--color-eggshell-white);
   color: var(--color-golden-brown);
   padding: 2rem;
   text-align: center;
 
   @media (min-width: 768px) {
-    padding: 12rem;
+    padding: 4rem 12rem 4rem 12rem;
   }
 
 }
@@ -252,5 +252,78 @@ input:focus-visible {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  
+  &:not(:last-child) {
+    margin: 2rem 0 2rem 0;
+  }
+}
+
+.main-item-card-1,
+.main-item-card-2,
+.main-item-card-3 {
+  width: 60%;
+  min-height: 20vh;
+  border: 0.4px solid var(--color-pink);
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  text-align: left;
+  color: var(--color-text-dark);
+}
+
+h2 {
+  color: var(--color-text-dark);
+}
+
+.signup {
+  /* border-top: 0.2px solid var(--color-jelly-bean-red); */
+  /* border-bottom: 0.2px solid var(--color-navbar-dark); */
+  padding: 4rem 0;
+  background-color: var(--color-eggshell-white);
+
+  > h2 {
+    font-size: x-large;
+    color: var(--color-golden-brown);
+    text-align: center;
+  }
+
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    > * {
+      width: 50%;
+      position: relative;
+      left: 25%;
+      margin: 0.8rem 0;
+      padding: 0.8rem;
+      font-size: inherit;
+      border: 0.5px solid var(--color-navbar-dark);
+
+      &:focus-visible {
+        border: 0.5px solid var(--color-jelly-bean-red);
+      }
+
+    }
+
+    > input[type=submit] {
+      background-color: var(--color-jelly-bean-red);
+      border-color: var(--color-jelly-bean-red);
+
+      &:hover {
+        cursor: pointer;
+      }
+
+    }
+
+    > textarea {
+      width: 50%;
+      
+      &:focus-visible {
+        border: 0.5px solid var(--color-jelly-bean-red);
+        outline: none;
+      }
+    }
+  }
 }

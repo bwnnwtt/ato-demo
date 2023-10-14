@@ -7,8 +7,8 @@ import Whatsapp from '../assets/Whatsapp'
 export default function Footer() {
 
   // eslint-disable-next-line
-  function handleSubmit() {
-
+  function handleSubmit(e) {
+    e.preventDefault()
   }
 
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
             <div>
               <pre>{`JOIN OUR\nEMAIL LIST FOR FREE\nGUIDE AND CHECKLISTS`}</pre>
               <div className="container">
-                <form className="input-form">
+                <form className="input-form" onSubmit={handleSubmit}>
                   <input type="email" className="input-field" placeholder="Enter your email" name="email" autoComplete="email"/>
                   <input type="submit" className="submit-button" value="JOIN" />
                 </form>
