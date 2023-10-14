@@ -71,15 +71,15 @@ export default function Footer() {
           </div>
           <hr />
           <div className="footer-end">
-            <span className="all-rights-reserved">
+            <span>
               2023 Ato Partners. All rights reserved
             </span>
-            <span className="privacy-policy">
+            <a href="https://#">
               Privacy Policy
-            </span>
-            <span className="terms-and-conditions">
+            </a>
+            <a href="https://#">
               Terms and Conditions
-            </span>
+            </a>
           </div>
         </div>
       </footer>

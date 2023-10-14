@@ -115,18 +115,19 @@ hr {
   width: 100%;
   font-size: 6px;
 
-  .all-rights-reserved {
+  > *:first-child {
     float: left;
   }
 
-  .privacy-policy {
+  > *:not(:first-child) {
     float: right;
     padding: 0 1rem;
-  }
+    text-decoration: none;
+    color: inherit;
 
-  .terms-and-conditions {
-    float: right;
-    padding: 0 1rem;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
 }
@@ -177,4 +178,55 @@ input:focus-visible {
     fill: var(--color-jelly-bean-red);
   }
   
+}
+
+.navbar {
+  height: 8rem;
+  background-color: var(--color-taupe-grey);
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    > li {
+      color: var(--color-eggshell-white);
+      list-style-type: none;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-inline-end: 2rem;
+
+      > a {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.navbar-logo {
+  height: 100%;
+}
+
+.hamburger-style,
+.hamburger-icon {
+  fill: var(--color-eggshell-white);
+}
+
+.main {
+  height: 100vh;
+  background-color: var(--color-eggshell-white);
+  color: var(--color-burly-wood);
+  padding: 2rem;
+  text-align: center;
 }
