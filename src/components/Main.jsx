@@ -1,5 +1,7 @@
 import { useEffect } from "react"
-
+import dining from '../assets/dining.jpg'
+import eventhall from '../assets/eventhall.jpg'
+import swimmingpool from '../assets/swimmingpool.jpg'
 
 const Main = () => {
 
@@ -22,6 +24,25 @@ const Main = () => {
     })
   }, [])
 
+  useEffect(() => {
+    const images = document.querySelectorAll(".image")
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("slide-up", entry.isIntersecting)
+
+        // disable element from disappearing once it has appeared in the viewport
+        if (entry.isIntersecting) observer.unobserve(entry.target)
+      })
+    }, {
+      threshold: 1,
+    })
+
+    images.forEach(card => {
+      observer.observe(card)
+    })
+  }, [])
+
   return (
     <div className="main">
       <h1>MEMBER PRIVILEGES</h1>
@@ -29,9 +50,7 @@ const Main = () => {
       <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus, possimus quaerat soluta sunt animi alias et excepturi impedit explicabo neque maxime assumenda, non dolorum aspernatur consequuntur incidunt quidem repellat?</h2>
       <br/>
       <div className="main-item-container">
-        <div className="main-item-img-1">
-          image here
-        </div>
+        <img src={dining} alt="dining" className="main-item-img-1 image"/>
         <div className="main-item-card-1 card">
           <h2>DINING OPTIONS</h2>
           <br/>
@@ -51,16 +70,10 @@ const Main = () => {
             Suspendisse sed rutrum turpis, et hendrerit tortor. Suspendisse semper pellentesque est, commodo maximus leo sagittis vulputate. Donec finibus sollicitudin quam, eu pretium tortor facilisis eu. Maecenas vel ipsum ullamcorper, sollicitudin quam dapibus, blandit libero. Nulla at diam eu diam pharetra commodo id et orci. Aenean justo nisl, tristique sed massa nec, porta pellentesque ipsum. Pellentesque ac vulputate dolor. Phasellus ac lorem mauris. Sed imperdiet arcu sed neque mollis, et pulvinar orci ornare.
           </p>
         </div>
-        <div className="main-item-img-2">
-          image here
-        </div>
+        <img src={eventhall} alt="event-hall" className="main-item-img-2 image"/>
       </div>
-      <div className="main-item-container" 
-      // ref={containerRef}
-      >
-        <div className="main-item-img-3">
-          image here
-        </div>
+      <div className="main-item-container" >
+        <img src={swimmingpool} alt="swimming-pool" className="main-item-img-3 image"/>
         <div className="main-item-card-3 card">
           <h2>SWIMMING POOL</h2>
           <br/>
