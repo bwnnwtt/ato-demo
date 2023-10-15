@@ -12,7 +12,7 @@ export default function Footer() {
   }
 
   return (
-      <footer className="App-footer">
+      <footer className="footer">
         <div className="footer-container">
           <div className="grid-container">
             <div>
